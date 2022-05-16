@@ -1,0 +1,25 @@
+### taps
+# tap "your/taphere"
+
+### brews
+# unix
+brew "git"
+brew "openssl"
+brew "tmux"
+brew "vim"
+
+# GitHub
+brew "gh"
+
+# Image manipulation
+brew "imagemagick"
+
+### casks
+cask "firefox"
+cask "google-chrome"
+cask "slack"
+cask "discord"
+cask "visual-studio-code"
+cask "1password"
+cask "1password-cli"
+cask "iterm2"
