@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 ## Ask for the administrator password upfront
 sudo -v
 
@@ -6,7 +8,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ## MacOS settings config
 echo "#### MacOS settings setup"
-source ./.macos
+source macos.zsh
 
 ## Install brew
 if ! command -v brew &> /dev/null
@@ -35,6 +37,8 @@ else
     echo "##### p10k is already installed"
 fi
 
-echo "##### copying oh-my-zsh and p10k configs and custom scripts"
+echo "##### copying custom scripts and dotfiles"
+rsync -au .zshrc ${HOME}/.zshrc
 rsync -au ./.oh-my-zsh ${HOME}/.oh-my-zsh
 rsync -au ./.p10k.zsh ${HOME}/.p10k.zsh
+rsync -au ./.ssh ${HOME}/.ssh
