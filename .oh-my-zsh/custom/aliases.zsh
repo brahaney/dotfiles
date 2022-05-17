@@ -67,3 +67,7 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+# docker/containerd/nerdctl
+alias docker="nerdctl"
+alias docker-compose="nerdctl compose"
